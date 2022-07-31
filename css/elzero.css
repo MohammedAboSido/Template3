@@ -1282,6 +1282,77 @@ ul {
 
 /* End Events */
 
+/* Start Pricing */
+.pricing {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    position: relative;
+    background-color: var(--section-background);
+}
+
+.pricing .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.pricing .box {
+    position: relative;
+    box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+    transition: var(--main-transition);
+    background-color: white;
+    text-align: center;
+    z-index: 1;
+
+}
+
+.pricing .box::after,
+.pricing .box::before{
+    content: "";
+    width: 0;
+    height: 50%;
+    background-color: #F6F6F6;
+    position: absolute;
+    z-index: -1;
+    transition: var(--main-transition);
+}
+
+
+.pricing .box::before{
+    left: 0;
+    top: 0;
+}
+
+.pricing .box::after {
+    right: 0;
+    bottom: 0;
+}
+
+.pricing .box:hover::after,
+.pricing .box:hover::before{
+    width: 100%;
+}
+
+
+.pricing .box .title {}
+
+.pricing .box img {}
+
+.pricing .box .price {}
+
+.pricing .box .price .amout {}
+
+.pricing .box .price .time {}
+
+.pricing .box ul {}
+
+.pricing .box ul li {}
+
+.pricing .box a {}
+
+
+/* End Pricing */
+
 /* Start Animation */
 @keyframes up-and-down {
 
