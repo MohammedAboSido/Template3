@@ -1041,7 +1041,7 @@ ul {
     .work-steps .container {
         flex-direction: column;
     }
-    
+
 }
 
 .work-steps .image {
@@ -1054,7 +1054,7 @@ ul {
     .work-steps .image {
         margin: 0 0 50px;
     }
-    
+
 }
 
 .work-steps .info .box {
@@ -1079,7 +1079,7 @@ ul {
 .work-steps .info .box::before {
     content: "";
     left: 50%;
-    top:50%;
+    top: 50%;
     transform: translate(-50%, -50%);
     position: absolute;
     width: 0;
@@ -1127,6 +1127,77 @@ ul {
 
 
 /* End Work Steps */
+
+/* Start Events */
+.events {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    position: relative;
+}
+
+.events .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.events img {
+    max-width: 450px;
+}
+
+@media (max-width:991px) {
+    .events img {
+        display: none;
+    }
+}
+
+.events .info {
+    flex: 1;
+}
+
+.events .info .time {
+    display: flex;
+    align-items: center;
+    margin: 20px auto;
+    gap: 10px;
+    justify-content: center;
+}
+
+.events .info .time .unit {
+    border: 1px solid  #D4D4D4;
+    border-radius: 6px;
+    text-align: center;
+    width: 75px;
+    transition: var(--main-transition);
+}
+
+.events .info .time .unit span {
+    display: block;
+}
+
+.events .info .time .unit span:first-child {
+    font-size: 35px;
+    padding: 15px;
+    color: var(--main-color);
+    font-weight: bold;
+}
+.events .info .time .unit span:last-child {
+    padding: 8px 10px;
+    font-size: 13px;
+    border-top: 1px solid #D4D4D4;
+}
+
+.events .info .title {}
+
+.events .info .description {}
+
+.events .subscribe {
+    width: 100%;
+    margin-top: 50px;
+}
+
+
+/* End Events */
 
 /* Start Animation */
 @keyframes up-and-down {
