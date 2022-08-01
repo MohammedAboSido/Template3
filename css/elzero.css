@@ -1124,8 +1124,6 @@ ul {
     font-size: 18px;
 }
 
-
-
 /* End Work Steps */
 
 /* Start Events */
@@ -1303,7 +1301,6 @@ ul {
     background-color: white;
     text-align: center;
     z-index: 1;
-
 }
 
 .pricing .box::after,
@@ -1442,11 +1439,11 @@ ul {
 }
 
 @media (max-width:991px) {
-    
-.videos .holder {
-    flex-direction: column;
-    
-}
+
+    .videos .holder {
+        flex-direction: column;
+
+    }
 }
 
 .videos .holder .list {
@@ -1465,7 +1462,7 @@ ul {
 
 .videos .holder .list ul li {
     padding: 20px;
-    border-top:1px solid var(--section-background);
+    border-top: 1px solid var(--section-background);
     cursor: pointer;
     transition: var(--main-transition);
 }
@@ -1500,6 +1497,96 @@ ul {
 }
 
 /* End Videos */
+
+/* Start Stats  */
+
+.stats {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    position: relative;
+    background-image: url(../images/stats.jpg);
+    background-size: cover;
+    min-height: 300px;
+}
+
+.stats::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255 255 255 / 95%);
+}
+
+.stats>h2 {
+    font-weight: bold;
+    font-size: 40px;
+    margin: 0 auto 50px;
+    width: fit-content;
+    position: relative;
+}
+
+.stats .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.stats .box {
+    background-color: white;
+    padding: 30px 15px;
+    text-align: center;
+    position: relative;
+    opacity: 0.8;
+    transition: var(--main-transition);
+}
+
+.stats .box:hover {
+    opacity: 1;
+}
+
+.stats .box::before,
+.stats .box::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    background-color: var(--main-color);
+    transition: 1s;
+    height: 0;
+}
+
+.stats .box::before {
+    top: 0;
+    right: 0;
+}
+
+.stats .box::after {
+    left: 0;
+    bottom: 0;
+}
+
+.stats .box:hover::before,
+.stats .box:hover::after {
+    height: 100%;
+}
+
+.stats .box .number {
+    display: block;
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.stats .box .text {
+    color: var(--main-color);
+    font-style: italic;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* End Stats  */
 
 /* Start Animation */
 @keyframes up-and-down {
