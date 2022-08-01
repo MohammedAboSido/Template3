@@ -1605,6 +1605,7 @@ ul {
     justify-content: center;
     position: relative;
     z-index: 1;
+    animation: change-background 10s linear infinite;
 }
 
 .discount .image::before {
@@ -1618,6 +1619,13 @@ ul {
     z-index: -1;
 }
 
+@media (max-width:991px) {
+    .discount .image {
+        flex-basis: 100%;
+    }
+
+}
+
 
 .discount .form {
     display: flex;
@@ -1626,12 +1634,49 @@ ul {
     flex-basis: 50%;
 }
 
-.discount .form .content {}
+@media (max-width:991px) {
+    .discount .form {
+        flex-basis: 100%;
+    }
 
-.discount .form .content h2 {}
+}
 
-.discount .form .content form {}
+.discount .form .input {
+    display: block;
+    width: 100%;
+    margin-bottom: 25px;
+    padding: 15px;
+    border: none;
+    border-bottom: 1px solid #CCC;
+    background-color: #F9F9F9;
+    caret-color: var(--main-color);
+}
 
+.discount .form textarea.input {
+    resize: none;
+    height: 200px;
+}
+
+.discount .form .input:focus {
+    outline: none;
+}
+
+.discount .form [type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--main-color);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+
+.discount .form [type="submit"]:hover {
+    background-color: var(--main-color-alt);
+}
 
 .discount .content {
     text-align: center;
@@ -1641,6 +1686,7 @@ ul {
 .discount .content h2 {
     font-size: 40px;
     letter-spacing: -2px;
+    margin: 40px 0;
 }
 
 .discount .content p {
@@ -1734,6 +1780,18 @@ ul {
         opacity: 0;
         width: 200%;
         height: 200%;
+    }
+}
+
+@keyframes change-background {
+
+    0%,
+    100% {
+        background-image: url(../images/discount-background1.jpg);
+    }
+
+    50% {
+        background-image: url(../images/discount-background2.jpg);
     }
 }
 
